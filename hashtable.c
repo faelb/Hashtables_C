@@ -20,6 +20,7 @@ hashtable *ht_init(int capacity) {
 int ht_hash(hashtable *ht, char *key) {
     int realkey = 0;
     for (int i = 0; i < 4; ++i) {
+        //realkey += key[i];
         realkey += key[i];
     }
     //capacity mod keyvalue -> damit ist garantiert das in diesem Fall 0-99 ausgefüllt ist, denn mod 100 wäre 0 rest und wäre somit in array[0] bis may array[99] -> gscheit
@@ -43,5 +44,11 @@ char *ht_get(hashtable *ht, char *key) {
 }
 
 void ht_print_bucket_sizes(hashtable *ht) {
-    /* TODO: implement printing of bucket sizes */
+    for (int i = 0; ht->buckets[i] != 0 ; ++i) {
+        printf("size of bucket[%d] = ",i);
+        printf("%d \n",ht->buckets[i]->count);
+
+    }
+
+
 }

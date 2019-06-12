@@ -50,6 +50,7 @@ int main (int argc, char * const argv[]) {
 	// now retrieve data from the hash table make a cast to the correct type
 	// since we are storing characters, cast to char *
 	printf("value for key FVBU is %s\n", (char *)ht_get(ht, "FVBU"));
+	ht_print_bucket_sizes(ht);
 	
 	return 0;
 }
