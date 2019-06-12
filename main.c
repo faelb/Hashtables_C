@@ -4,6 +4,8 @@
 #include <memory.h>
 #include <string.h>
 #include <ctype.h>
+#include "list.c" //included
+#include "hashtable.c"
 
 int main (int argc, char * const argv[]) {
 	char line[100]; // keeps one line of the file

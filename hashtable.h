@@ -17,7 +17,7 @@ typedef struct _hashtable hashtable;
 
 hashtable *	ht_init(int capacity);								// returns a pointer to a new hash table
 int         ht_hash(hashtable * ht, char * key);				// a hash function that generates a hash value from a string
-void        ht_put(hashtable * ht, char * key, char * value);	// adds a key/value pair to the 
+void        ht_put(hashtable * ht, char * key, char * value);	// adds a key/value pair to the hashtable
 char *      ht_get(hashtable * ht, char * key);					// retrieves a value from hash table
 void		ht_print_bucket_sizes(hashtable * ht);				// prints the sizes of all buckets
 
